@@ -24,7 +24,6 @@ b2 com1
 b2 com2
 b2 com3
 b1 commit4
-b1 commit5 we deleted some lines
 Naming things is hard. This sheet attempts to make it easier.
 
 Although these suggestions can be applied to any programming language, I will use JavaScript to illustrate them in practice.
@@ -169,7 +168,14 @@ You can use `get` when performing asynchronous operations as well:
 
 ```js
 async function getUser(id) {
-  const user = await fetch(`ddddse `A` to value `B`.
+  const user = await fetch(`/api/user/${id}`)
+  return user
+}
+```
+
+### `set`
+
+Sets a variable in a declarative way, with value `A` to value `B`.
 
 ```js
 let fruits = 0
@@ -261,7 +267,7 @@ function handleLinkClick() {
 }
 
 link.addEventListener('click', handleLinkClick)
-``
+```
 
 ---
 
@@ -343,6 +349,7 @@ function renderPosts(posts, minPosts, maxPosts) {
 ```
 
 ### `prev`/`next`
+
 Indicate the previous or the next state of a variable in the current context. Used when describing state transitions.
 
 ```jsx
@@ -350,4 +357,22 @@ async function getPosts() {
   const prevPosts = this.state.posts
 
   const latestPosts = await fetch('...')
-  const nextPosts = concat(prevPosts,
+  const nextPosts = concat(prevPosts, latestPosts)
+
+  this.setState({ posts: nextPosts })
+}
+```
+
+## Singular and Plurals
+
+Like a prefix, variable names can be made singular or plural depending on whether they hold a single value or multiple values.
+
+```js
+/* Bad */
+const friends = 'Bob'
+const friend = ['Bob', 'Tony', 'Tanya']
+
+/* Good */
+const friend = 'Bob'
+const friends = ['Bob', 'Tony', 'Tanya']
+```
