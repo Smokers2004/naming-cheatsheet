@@ -23,6 +23,7 @@
 b2 com1
 b2 com2
 b2 com3
+b1 commit4
 Naming things is hard. This sheet attempts to make it easier.
 
 Although these suggestions can be applied to any programming language, I will use JavaScript to illustrate them in practice.
